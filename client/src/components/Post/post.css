@@ -1,0 +1,93 @@
+.theme-dark {
+    --bgcolor-post: #0c3b66;
+    --color-desc-post: #d1effd;
+    --color-title-post: #007fff;
+    --color-date-post: #829fcc;
+    --color-box-shadow-post: rgba(255, 255, 255, 0.5);
+}
+
+.theme-light {
+    --bgcolor-post: #ffffff;
+    --color-desc-post: #444;
+    --color-title-post: #212529;
+    --color-date-post: #999;
+    --color-box-shadow-post: rgba(201, 232, 242, 1);
+}
+
+
+.post {
+    width: 90%;
+    margin: 0px 0px 50px 35px;
+    -webkit-box-shadow: 10px 10px 17px -1px var(--color-box-shadow-post);
+    -moz-box-shadow: 10px 10px 17px -1px var(--color-box-shadow-post);
+    box-shadow: 10px 10px 17px -1px var(--color-box-shadow-post);
+    background-color: var(--bgcolor-post);
+}
+
+.post:hover {
+    transition: all .8s ease-in-out;
+    -webkit-box-shadow: -200px -200px 0px -200px rgba(201, 232, 242, 1);
+    -moz-box-shadow: -200px -200px 0px -200px rgba(201, 232, 242, 1);
+    box-shadow: -200px -200px 0px -200px rgba(201, 232, 242, 1);
+}
+
+.postImg {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.postInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postCat {
+    font-size: 11px;
+    color: #d49837;
+    font-family: 'Varela', sans-serif;
+    line-height: 20px;
+    margin-right: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.postTitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 15px;
+    color: var(--color-title-post);
+}
+
+.postDate {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    margin-top: -32px;
+    font-style: italic;
+    color: var(--color-date-post);
+}
+
+.postDesc {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+    color: var(--color-desc-post);
+    line-height: 24px;
+    margin-top: 15px;
+    padding: 0px 10px;
+    /* to show only somedescription not full */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width:650px) {
+    .post{
+        width: 100%;
+        margin: 0px 0px 50px 5px;
+    }
+}

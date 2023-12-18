@@ -1,0 +1,277 @@
+.theme-dark {
+  --bgcolor: #071a2f;
+  --color-primary: #f1f2f3;
+}
+
+.theme-light {
+  --bgcolor: #f5f5f5;
+  --color-primary: #444;
+}
+
+.top {
+  width: 100%;
+  height: 50px;
+  background-color: var(--bgcolor);
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  z-index: 999;
+}
+
+.topLeft,
+.topRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topCenter {
+  flex: 6;
+}
+
+.topIcon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.topImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+.topList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-primary);
+}
+
+.topListItem {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.topSettingIcon {
+  font-size: 22px;
+  color: var(--color-primary);
+  cursor: pointer;
+  margin-left: 15px;
+  transition: width 2s, height 1s, transform 2s;
+  position: relative;
+  top: 3px;
+}
+
+.topSettingIcon:hover {
+  transform: rotate(90deg);
+}
+
+.topLogout {
+  color: var(--color-primary) !important;
+  font-size: 16px !important;
+  margin-left: 35px !important;
+  margin-right: 16px !important;
+}
+
+/* hover effect of background */
+.top .hover {
+  background-image: linear-gradient(
+    to right,
+    #0072e4,
+    #0072e4 50%,
+    var(--color-primary) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.top .hover:before {
+  content: "";
+  background: #66b2ff;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.top .hover:hover {
+  background-position: 0;
+}
+
+.top .hover:hover::before {
+  width: 100%;
+}
+
+.topLeft .fa-square-facebook:hover {
+  color: #1877f2;
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+
+.topLeft .fa-square-instagram:hover {
+  color: #ea0ecd;
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+
+.topLeft .fa-github:hover {
+  color: #333;
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+
+.topLeft .fa-square-twitter:hover {
+  color: #1da1f2;
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .topLeft,
+  .topCenter,
+  .topRight {
+    display: none;
+  }
+}
+
+/* mobile screen */
+
+.navbar-menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+}
+
+.navbar-menu svg {
+  width: 70%;
+  height: 70%;
+  color: var(#ffffff);
+}
+
+.navbar-menu div {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+
+  padding: 1rem;
+
+  width: 100%;
+  height: 50vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: url("../../img/bgWhite.png");
+  background-color: var(--bgcolor);
+  background-size: cover;
+  background-repeat: repeat;
+
+  /* top box shadow */
+  box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
+}
+
+.navbar-menu div svg {
+  width: 35px;
+  height: 35px;
+  color: #666779;
+  margin: 0.5rem 1rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.navbar-menu div ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navbar-menu div li {
+  margin: 1rem;
+}
+
+.navbar-menu div a {
+  color: #6b7688;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.mob-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mob-nav .topRight-mob {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 1%;
+}
+
+.bottom-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 5px;
+  position: relative;
+  left: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-menu,
+  .dark-light-mode {
+    display: none;
+  }
+
+  .mob-nav .topRight-mob {
+    display: none;
+  }
+
+  .navbar-menu div {
+    display: none;
+  }
+}

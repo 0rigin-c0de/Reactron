@@ -1,0 +1,79 @@
+.theme-dark {
+    --color-head-about : #007fff;
+    --color-ans-about : #94abcf;
+    --color-aboutDescHead-about : #007fff;
+    --color-aboutDesc-about : #d0e4ed;
+    --bgcolor-cards-about : #0c3b66;
+    --bgcolor-cardsDate-about : #829fcc;
+}
+
+.theme-light{
+    --color-head-about : #444444;
+    --color-ans-about : #444444;
+    --color-aboutDescHead-about : #444444;
+    --color-aboutDesc-about : #666;
+    --bgcolor-cards-about : #ffffff;
+    --bgcolor-cardsDate-about : #000000;
+}
+
+/* for date in mui cards */
+.css-83ijpv-MuiTypography-root {
+    color: var(--bgcolor-cardsDate-about) !important;
+    font-size: 0.9rem !important;
+}
+
+/* for name in mui cards */
+.css-et1ao3-MuiTypography-root {
+    font-weight: 400;
+    font-size: 1.1rem !important;
+}
+
+.aboutHead{
+    color: var(--color-head-about);
+    font-size: 2.2rem;
+}
+
+.aboutHeadAns{
+    color: var(--color-ans-about);
+    font-size: 1.2rem;
+}
+
+.aboutDescHead{
+    color: var(--color-aboutDescHead-about);
+}
+
+.aboutDesc{
+    color: var(--color-aboutDesc-about);
+}
+
+.cards{
+    padding : 3% 5%;
+    margin-left: 0;
+}
+
+.cards .card{
+    margin: 4% 1%;
+    background-color: var(--bgcolor-cards-about);
+}
+
+.cards .cardImg{
+    height: 100%;
+    width: 100%;
+}
+
+.cardimg{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .cards{
+        padding : 3% 3%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .cards{
+        padding : 3% 1%;
+    }
+}

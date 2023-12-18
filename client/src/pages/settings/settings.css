@@ -1,0 +1,139 @@
+.theme-dark {
+  --color-label-settings: #3b94ec;
+  --bgcolor-input-settings: #0c3b66;
+  --color-inputborder-settings: #1a86ec;
+  --color-input-settings: #bee9fa;
+}
+
+.theme-light {
+  --color-label-settings: #212529;
+  --bgcolor-input-settings: #ffffff;
+  --color-inputborder-settings: lightgray;
+  --color-input-settings: gray;
+}
+
+.settings {
+  display: flex;
+}
+
+.settingsWrapper {
+  flex: 9;
+  padding: 20px;
+}
+
+.settingLabel {
+  color: var(--color-label-settings);
+}
+
+.settingsTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settingsTitleUpdate {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: lightcoral;
+}
+
+.settingsTitleDelete {
+  color: red;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.settingsPP {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.settingsPP>img {
+  height: 70px;
+  width: 70px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.settingsPPIcon {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  margin-left: 10px;
+  color: white;
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+.settingsPPButton:focus {
+  outline-style: none;
+}
+
+.settingsForm>label {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.settingsPPInput {
+  width: 30%;
+}
+
+.settingsForm>input {
+  color: var(--color-input-settings);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid var(--color-inputborder-settings);
+  outline: none;
+  background-color: var(--bgcolor-input-settings);
+}
+
+.settingsForm>input::placeholder {
+  color: var(--color-input-settings);
+}
+
+.settingsSubmitButton {
+  align-self: center !important;
+  width: 150px !important;
+  border: none !important;
+  border-radius: 10px !important;
+  color: white !important;
+  background-color: teal !important;
+  padding: 10px !important;
+  margin-top: 20px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.settingsSubmitButton:hover {
+  background-color: rgb(1, 114, 114) !important;
+transition: .3s ease !important;
+}
+
+@media screen and (max-width:500px) {
+  .settingsTitleDelete {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+  }
+
+  .settingsTitleUpdate{
+    margin-top: 10px;
+  }
+}

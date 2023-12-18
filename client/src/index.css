@@ -1,0 +1,44 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;600&family=Lora:ital,wght@1,400;1,500;1,600&family=Varela&display=swap');
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lora', serif;
+font-family: 'Varela', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px grey;
+    border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(135, 132, 132);
+    border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #696565;
+}
+
+/* for <Link> </Link> */
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link:hover {
+    color: inherit;
+    transition: .2s ease-in-out;
+}

@@ -1,0 +1,17 @@
+.posts {
+  flex: 9;
+  margin-top: 32px;
+}
+
+@media screen and (max-width: 750px) {
+  .posts {
+    margin-right: 0px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .posts {
+    padding: 0 10px;
+  }
+}

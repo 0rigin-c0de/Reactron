@@ -15,11 +15,14 @@ export default function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       setProgress(10);
-      const res = await axios.get("http://localhost:5000/api/posts" + search, {
-        headers: {
-          token: "bearer " + localStorage.getItem("accessToken"),
-        },
-      });
+      const res = await axios.get(
+        "https://reactron01.onrender.com/api/posts" + search,
+        {
+          headers: {
+            token: "bearer " + localStorage.getItem("accessToken"),
+          },
+        }
+      );
       setProgress(50);
       setPosts(res.data);
       setProgress(100);

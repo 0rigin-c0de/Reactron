@@ -16,7 +16,9 @@ function Singlepost() {
   useEffect(() => {
     const fetchSinglePost = async () => {
       setProgress(0);
-      const res = await axios.get(`http://localhost:5000/api/posts/${postId}`);
+      const res = await axios.get(
+        `https://reactron01.onrender.com/api/posts/${postId}`
+      );
       setProgress(30);
       setSinglePost(res.data);
       setProgress(100);
@@ -28,7 +30,7 @@ function Singlepost() {
 
   // to show stored image in api folder
   // make Public folder
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://reactron01.onrender.com/images/";
 
   //2 - delete post if this post belongs to current user
   const context = useContext(UserContext);
@@ -38,7 +40,7 @@ function Singlepost() {
   const handleDelete = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:5000/api/posts/delete/${postId}`,
+        `https://reactron01.onrender.com/api/posts/delete/${postId}`,
         {
           headers: {
             token: "bearer " + localStorage.getItem("accessToken"),

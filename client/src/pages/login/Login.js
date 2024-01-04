@@ -18,10 +18,13 @@ function Login() {
     e.preventDefault();
     try {
       // eslint-disable-next-line
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
-        username: credentials.username,
-        password: credentials.password,
-      });
+      const res = await axios.post(
+        "https://reactron01.onrender.com/api/auth/login",
+        {
+          username: credentials.username,
+          password: credentials.password,
+        }
+      );
       const data = res.data;
       if (data.success) {
         setUser(data.user); // So that can get redirected itself without refreshing the page

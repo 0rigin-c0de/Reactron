@@ -18,11 +18,14 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", {
-        username: credentials.username,
-        email: credentials.email,
-        password: credentials.password,
-      });
+      const res = await axios.post(
+        "https://reactron01.onrender.com/api/auth/register",
+        {
+          username: credentials.username,
+          email: credentials.email,
+          password: credentials.password,
+        }
+      );
       const data = res.data;
       console.log(data);
       if (data.success) {

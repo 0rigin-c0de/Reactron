@@ -193,7 +193,7 @@
   align-items: center;
   flex-direction: column;
 
-  background: url("../../img/bgWhite.png");
+  /* background: url("../../img/bgWhite.png"); */
   background-color: var(--bgcolor);
   background-size: cover;
   background-repeat: repeat;

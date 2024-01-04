@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://reactron01.onrender.com/images/";
 
   const context = useContext(UserContext);
   const { user, setUser, mode, setMode } = context;

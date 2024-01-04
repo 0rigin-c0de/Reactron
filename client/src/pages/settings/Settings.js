@@ -20,7 +20,7 @@ function Setting() {
 
   // to show stored image in api folder
   // make Public folder
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://reactron01.onrender.com/images/";
 
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -39,7 +39,7 @@ function Setting() {
       updatedUser.profilePic = filename;
       try {
         // upload image
-        await axios.post("http://localhost:5000/api/upload", data);
+        await axios.post("https://reactron01.onrender.com/api/upload", data);
       } catch (err) {
         console.log(err);
       }
@@ -47,7 +47,7 @@ function Setting() {
     try {
       // now update user
       const res = await axios.put(
-        `http://localhost:5000/api/users/update/${user._id}`,
+        `https://reactron01.onrender.com/api/users/update/${user._id}`,
         updatedUser,
         {
           headers: {
@@ -70,7 +70,7 @@ function Setting() {
   const handleDelete = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:5000/api/users/delete/${user._id}`,
+        `https://reactron01.onrender.com/api/users/delete/${user._id}`,
         {
           headers: {
             token: "bearer " + localStorage.getItem("accessToken"),

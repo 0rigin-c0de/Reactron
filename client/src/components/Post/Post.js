@@ -12,7 +12,7 @@ function Post(props) {
     const { mode } = context;
     // to show stored image in api folder
     // make Public folder
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://reactron01.onrender.com/images/";
     return (
         <motion.div
             whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}

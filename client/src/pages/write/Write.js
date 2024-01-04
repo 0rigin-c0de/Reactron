@@ -31,7 +31,7 @@ export default function Write() {
       newPost.photo = filename;
       try {
         // upload image
-        await axios.post("http://localhost:5000/api/upload", data);
+        await axios.post("https://reactron01.onrender.com/api/upload", data);
       } catch (err) {
         console.log(err);
       }
@@ -39,7 +39,7 @@ export default function Write() {
     try {
       // now upload newPost
       const res = await axios.post(
-        "http://localhost:5000/api/posts/createpost",
+        "https://reactron01.onrender.com/api/posts/createpost",
         newPost,
         {
           headers: {
